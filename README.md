@@ -94,11 +94,14 @@ Key techniques:
 The following hyperparameters were systematically explored:
 
 1) Learning Rate: 0.0001, 0.001, 0.01
-   ***Best:0.001*
-2) Batch Size: 16, 32, 64
-   ***Best: 64*
-4) Dropout Probability: 0.0, 0.3, 0.5
-   ***Best:0.3*
+
+   *Best:0.001*
+3) Batch Size: 16, 32, 64
+
+   *Best: 64*
+5) Dropout Probability: 0.0, 0.3, 0.5
+
+   *Best:0.3*
 
 Experiments were conducted using controlled loops to ensure fair comparison.
 

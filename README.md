@@ -130,11 +130,5 @@ Experiments were conducted using controlled loops to ensure fair comparison.
 
 ---
 
-## Future Improvements
-
-* Unfreeze deeper layers for fine-tuning
-* Experiment with EfficientNet architectures
-* Add Grad-CAM visual explanations
-* Perform cross-validation
 
 ---

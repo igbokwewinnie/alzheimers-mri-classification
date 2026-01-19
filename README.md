@@ -40,6 +40,8 @@ Key EDA steps included:
 * Feature-level statistics (mean intensity, contrast)
 * Comparison of distributions across Alzheimer’s stages
 
+***Key Finding**: ***Pixel intensity distributions across classes were similar, indicating no severe brightness bias. This suggested that subtle structural features rather than simple brightness would be critical for classification.***
+
 ### 2. Model Development
 
 Model training and hyperparameter tuning were performed in a **Kaggle Notebook** to leverage free GPU resources.
@@ -78,27 +80,27 @@ Key techniques:
 
 ### Metrics Used
 **Final Model Performance**
+```
+  Metric         Validation       Test
 
-Metric              Validation       Test
 * Accuracy       90.54%           89.90%
 * Precision      0.8407           0.90
 * Recall         0.8401           0.90
+```
 
 
 ### Hyperparameter Tuning
 
 The following hyperparameters were systematically explored:
 
-* Learning Rate: 0.0001, 0.001, 0.01
-* Batch Size: 16, 32, 64
-* Dropout Probability: 0.0, 0.3, 0.5
+1) Learning Rate: 0.0001, 0.001, 0.01
+   ***Best:0.001*
+2) Batch Size: 16, 32, 64
+   ***Best: 64*
+4) Dropout Probability: 0.0, 0.3, 0.5
+   ***Best:0.3*
 
 Experiments were conducted using controlled loops to ensure fair comparison.
-
-### Optimal Hyperparameters
-- Learning Rate: 0.001
-- Batch Size: 64
-- Dropout: 0.0
 
 ---
 
@@ -118,7 +120,7 @@ Experiments were conducted using controlled loops to ensure fair comparison.
 ## Key Findings
 
 * Pixel intensity distributions across classes were similar, indicating no severe brightness bias.
-* Dropout of 0.0 provided best balance between underfitting and overfitting
+* Dropout of 0.3 provided best balance between underfitting and overfitting
 * Transfer learning significantly reduced training time while achieving reasonable validation performance.
 
 ---
@@ -127,8 +129,5 @@ Experiments were conducted using controlled loops to ensure fair comparison.
 
 * EDA and modeling were intentionally separated across platforms to optimize workflow.
 * This repository focuses on **clarity, reproducibility, and learning outcomes** rather than leaderboard optimization.
-
----
-
 
 ---
